@@ -1,3 +1,7 @@
+package Week2;
+
+import io.netty.channel.ChannelHandlerContext;
+import io.netty.handler.codec.http.FullHttpRequest;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.ResponseHandler;
@@ -63,7 +67,7 @@ public class HttpClient1 {
     }
 
     public static void main(String[] args) throws IOException {
-        String url = "http://localhost:8801";
+        String url = "http://localhost:8088/hello";
         String text = HttpClient1.DoGet(url);
         System.out.println(url + " " + text);
     }
